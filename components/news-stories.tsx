@@ -3,19 +3,21 @@ import { ArrowUpRight } from 'lucide-react'
 const stories = [
   {
     title: 'Berkeley Math Tournament adds up to a big win for Math Club',
-    summary: 'Our competition team placed 10th overall at the Berkeley Math Tournament, our best finish in recent years.',
     date: 'Nov 19, 2024',
     href: 'https://palyvoice.com/179845/news/berkeley-math-tournament-adds-up-to-a-big-win-for-math-club',
   },
   {
+    title: 'Math Club places third in the Bay Area Math Olympiad',
+    date: 'May 3, 2023',
+    href: '  https://thecampanile.org/28652/uncategorized/math-club-places-third-in-the-bay-area-math-olympiad/',
+  },
+  {
     title: "Palo Alto High School's second annual Team Math Contest attracts dozens of students",
-    summary: 'Dozens of students came out to compete in the second year of the Annual Team Math Contest hosted at Paly.',
-    date: null,
+    date: 'May 9, 2018',
     href: 'https://palyvoice.com/140998/news/palo-alto-high-schools-second-annual-team-math-contest-attracts-dozens-of-students',
   },
   {
     title: 'Viking math team places in national competition',
-    summary: 'Two Paly teams traveled to Carnegie Mellon for CMIMC and placed 21st and 44th out of over 300 teams.',
     date: 'Mar 20, 2018',
     href: 'https://palyvoice.com/139138/news/viking-math-team-places-in-national-competition',
   },
@@ -31,7 +33,7 @@ export function NewsStories() {
             Stories
           </h2>
         </div>
-        <p className="text-sm text-[#4a554b]">Coverage from The Paly Voice</p>
+        <p className="text-sm text-[#4a554b]">Coverage from The Paly Voice and The Campanile</p>
       </div>
       <ul className="grid gap-6 md:grid-cols-3">
         {stories.map((story) => (
