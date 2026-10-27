@@ -20,7 +20,7 @@ export default function ArchivesPage() {
       <PageIntro
         eyebrow="Past problems, lasting ideas"
         title="Archives"
-        description="A collection of problems from our Team Selection Tests (TSTs) for competition teams, Annual Team Math contests (ATMS), and other events."
+        description="A collection of problems from our Team Selection Tests (TSTs) for competition teams, Annual Team Math contests (ATMS), and other events. Problems are either written by club members or compiled from public sources."
       />
 
       <section className="mx-auto max-w-3xl px-6 pb-24 lg:px-8">
