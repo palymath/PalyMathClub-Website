@@ -7,21 +7,8 @@ export const metadata: Metadata = {
   description: 'A community for curious minds at Palo Alto Senior High School in Palo Alto, CA.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/logo.webp',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/logo.webp',
+    apple: '/logo.webp',
   },
 }
 
