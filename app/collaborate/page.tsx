@@ -14,7 +14,7 @@ export default function CollaboratePage() {
       <PageIntro
         eyebrow="Work with us"
         title="Collaborate"
-        description="Want to join, partner on an event, donate, or sponsor? We would love to hear from you."
+        description="Want to join, partner on an event, donate, or sponsor? We would love to connect with you."
       />
       <section className="mx-auto flex max-w-3xl flex-col gap-6 px-6 pb-24 lg:px-8">
         <a
