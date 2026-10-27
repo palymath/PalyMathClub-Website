@@ -60,7 +60,7 @@ Your donation helps us run club meetings, fund events like the Palo Alto Girls M
             <h2 className="text-2xl font-black tracking-tight">Sponsor us</h2>
           </div>
           <p className="mt-4 leading-relaxed text-[#4a5a4e]">
-            Interested in sponsoring our events? Email us at{' '}
+            Interested in sponsoring us or any of our events? Email us at{' '}
             <a href={`mailto:${EMAIL}?subject=Sponsorship`} className="font-semibold text-[#1b5e3c] underline underline-offset-4">
               {EMAIL}
             </a>{' '}
