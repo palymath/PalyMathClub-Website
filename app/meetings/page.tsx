@@ -18,7 +18,7 @@ export default function MeetingsPage() {
       <PageIntro
         eyebrow="This week"
         title="Upcoming Meetings"
-        description="Drop in for practice, stay for the ideas. Here is what we are working on next."
+        description="We meet Wednesdays after school and Thursdays at lunch. Here are our upcoming meetings."
       />
       <section className="px-6 pb-16 lg:px-8" aria-label="Upcoming meetings">
         <ol className="mx-auto grid max-w-3xl gap-4">
