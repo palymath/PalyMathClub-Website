@@ -46,7 +46,7 @@ export const eventGroups: { heading: string; description: string; events: ClubEv
     events: [
       { title: 'Palo Alto Girls Math Tournament', abbr: 'PAGMT', url: 'https://pagmt.com', when: 'May', role: 'We organize' },
       { title: 'Palo Alto Middle School Math Camp', abbr: 'PAMS', url: 'https://pams.vercel.app', when: 'Summer', role: 'We co-organize' },
-      { title: 'Greene Math Club', url: 'https://greene.pausd.org/school-life/clubs', when: 'Yearlong', role: 'We organize' },
+      { title: 'Greene Middle School Math Club', url: 'https://greene.pausd.org/school-life/clubs', when: 'Yearlong', role: 'We organize' },
       { title: 'Annual Team Math Contest', abbr: 'ATM', location: 'At Paly', when: 'Winter & Spring', role: 'We organize' },
     ],
   },
