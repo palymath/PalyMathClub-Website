@@ -25,7 +25,7 @@ export function SiteHeader() {
             <a href="mailto:palymathclub@gmail.com" aria-label="Email the math club" className="transition-colors hover:text-[#1b5e3c]"><Mail className="size-4" /></a>
           </div>
         </div>
-        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold" aria-label="Main navigation">
+        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 pl-12 text-sm font-semibold" aria-label="Main navigation">
           {links.map((link) => <a key={link.href} href={link.href} className="transition-colors hover:text-[#1b5e3c]">{link.label}</a>)}
         </nav>
       </div>
