@@ -42,16 +42,18 @@ export default function MeetingsPage() {
             </li>
           ))}
         </ol>
-        <figure className="mt-16 overflow-hidden rounded-[2rem] bg-[#e6eee2] p-4 shadow-[12px_12px_0_#b7d9b2] sm:p-6">
-  <img
-    src="/images/atm.png"
-    alt="Annual Team Math Contest (ATM)"
-    className="h-auto w-full rounded-[1.5rem]"
-  />
-  <figcaption className="mt-4 text-center text-sm font-medium text-[#4a554b]">
-    Organizers and volunteers at the Annual Team Math Contest (ATM)
-  </figcaption>
-</figure>
+
+        {/* Constrained to max-w-3xl and centered with mx-auto */}
+        <figure className="mx-auto mt-16 max-w-3xl overflow-hidden rounded-[2rem] bg-[#e6eee2] p-4 shadow-[12px_12px_0_#b7d9b2] sm:p-6">
+          <img
+            src="/images/atm.png"
+            alt="The Annual Team Math Contest (ATM)"
+            className="h-auto w-full rounded-[1.5rem]"
+          />
+          <figcaption className="mt-4 text-center text-sm font-medium text-[#4a554b]">
+            The Annual Team Math Contest (ATM)
+          </figcaption>
+        </figure>
       </section>
     </PageShell>
   )
