@@ -9,6 +9,7 @@ const links = [
   { label: 'collaborate', href: '/collaborate' },
 ]
 
+
 export function SiteHeader() {
   return (
     <header className="border-b border-[#d5dfd2] bg-[#f7f8f4]">
