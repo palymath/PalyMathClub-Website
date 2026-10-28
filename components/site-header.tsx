@@ -4,7 +4,7 @@ const links = [
   { label: 'home', href: '/' },
   { label: 'events', href: '/events' },
   { label: 'upcoming meetings', href: '/meetings' },
-  { label: 'board', href: '/board' },
+  { label: 'leadership', href: '/board' },
   { label: 'archives', href: '/archives' },
   { label: 'collaborate', href: '/collaborate' },
 ]
