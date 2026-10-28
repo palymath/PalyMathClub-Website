@@ -116,11 +116,11 @@ export function EventCard({ event }: { event: ClubEvent }) {
         <h3 className="mt-2 text-xl font-bold text-[#101510] text-balance sm:text-2xl">{event.title}</h3>
         
         {event.image && (
-          <div className="mt-3 overflow-hidden rounded-xl">
+          <div className="mt-3">
             <img 
               src={event.image} 
               alt={event.title} 
-              className="h-auto w-full max-w-sm" 
+              className="h-14 w-auto rounded-lg object-contain" 
             />
           </div>
         )}
