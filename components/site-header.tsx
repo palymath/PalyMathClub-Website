@@ -37,15 +37,37 @@ export function SiteFooter() {
   return <footer className="border-t border-[#d5dfd2] px-6 py-7 lg:px-8"><div className="mx-auto flex max-w-6xl justify-between gap-4 text-sm text-[#607064]"><p>Paly Math Club · <a href="https://paly.net/about-us/campus-map" target="_blank" rel="noopener noreferrer" className="font-semibold underline-offset-4 hover:text-[#1b5e3c] hover:underline">Room 855</a></p><a href="mailto:palymathclub@gmail.com" className="font-semibold hover:text-[#1b5e3c]">palymathclub@gmail.com</a></div></footer>
 }
 
-export type ClubEvent = { title: string; abbr?: string; url?: string; location?: string; when: string; role?: string }
+export type ClubEvent = { 
+  title: string; 
+  abbr?: string; 
+  url?: string; 
+  location?: string; 
+  when: string; 
+  role?: string; 
+  image?: string 
+}
 
 export const eventGroups: { heading: string; description: string; events: ClubEvent[] }[] = [
   {
     heading: 'Events we run',
     description: 'Programs our club organizes for the community.',
     events: [
-      { title: 'Palo Alto Girls Math Tournament', abbr: 'PAGMT', url: 'https://pagmt.com', when: 'May', role: 'We organize' },
-      { title: 'Palo Alto Middle School Math Camp', abbr: 'PAMS', url: 'https://pams.vercel.app', when: 'Summer', role: 'We co-organize' },
+      { 
+        title: 'Palo Alto Girls Math Tournament', 
+        abbr: 'PAGMT', 
+        url: 'https://pagmt.com', 
+        when: 'May', 
+        role: 'We organize', 
+        image: '/images/pagmt.png' // Update extension if pagmt.jpg or pagmt.png
+      },
+      { 
+        title: 'Palo Alto Middle School Math Camp', 
+        abbr: 'PAMS', 
+        url: 'https://pams.vercel.app', 
+        when: 'Summer', 
+        role: 'We co-organize', 
+        image: '/images/pamslogo.webp' 
+      },
       { title: 'Greene Middle School Math Club', url: 'https://greene.pausd.org/school-life/clubs', when: 'Yearlong', role: 'We organize' },
       { title: 'Annual Team Math Contest', abbr: 'ATM', location: 'At Paly', when: 'Winter & Spring', role: 'We organize' },
     ],
@@ -86,14 +108,25 @@ export function EventCard({ event }: { event: ClubEvent }) {
   const cardClass = "flex flex-col gap-4 rounded-2xl border border-[#cbd8c8] bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6"
   const content = (
     <>
-      <div className="min-w-0">
+      <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
           {event.abbr && <span className="rounded-md bg-[#dcebd7] px-2 py-0.5 text-xs font-bold tracking-wider text-[#1b5e3c]">{event.abbr}</span>}
           {event.role && <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#1b5e3c]">{event.role}</span>}
         </div>
         <h3 className="mt-2 text-xl font-bold text-[#101510] text-balance sm:text-2xl">{event.title}</h3>
+        
+        {event.image && (
+          <div className="mt-3 overflow-hidden rounded-xl">
+            <img 
+              src={event.image} 
+              alt={event.title} 
+              className="h-auto w-full max-w-sm" 
+            />
+          </div>
+        )}
+
         {event.url ? (
-          <p className="mt-1 break-all text-sm text-[#607064] group-hover:text-[#1b5e3c] group-hover:underline">
+          <p className="mt-2 break-all text-sm text-[#607064] group-hover:text-[#1b5e3c] group-hover:underline">
             {event.url.replace(/^https?:\/\//, '')}
             <span className="sr-only"> (opens in a new tab)</span>
           </p>
