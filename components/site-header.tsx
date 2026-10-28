@@ -25,13 +25,13 @@ export function SiteHeader() {
             <a href="mailto:palymathclub@gmail.com" aria-label="Email the math club" className="transition-colors hover:text-[#1b5e3c]"><Mail className="size-4" /></a>
           </div>
         </div>
-        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold" aria-label="Main navigation">
+        {/* Added pl-12 (48px padding) to match logo width (36px) + gap (12px) */}
+        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 pl-12 text-sm font-semibold" aria-label="Main navigation">
           {links.map((link) => <a key={link.href} href={link.href} className="transition-colors hover:text-[#1b5e3c]">{link.label}</a>)}
         </nav>
       </div>
     </header>
   )
-}
 
 export function SiteFooter() {
   return <footer className="border-t border-[#d5dfd2] px-6 py-7 lg:px-8"><div className="mx-auto flex max-w-6xl justify-between gap-4 text-sm text-[#607064]"><p>Paly Math Club · <a href="https://paly.net/about-us/campus-map" target="_blank" rel="noopener noreferrer" className="font-semibold underline-offset-4 hover:text-[#1b5e3c] hover:underline">Room 855</a></p><a href="mailto:palymathclub@gmail.com" className="font-semibold hover:text-[#1b5e3c]">palymathclub@gmail.com</a></div></footer>
