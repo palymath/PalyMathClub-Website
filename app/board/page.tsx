@@ -16,7 +16,7 @@ export default function BoardPage() {
           <img
             src="/images/pagmtteam.JPG"
             alt="Organizers and volunteers at the Palo Alto Girls Math Tournament (PAGMT)"
-            className="aspect-[3/1] w-full rounded-[1.5rem] object-cover sm:aspect-[4/1]"
+            className="aspect-[3/2] w-full rounded-[1.5rem] object-cover sm:aspect-[4/1]"
           />
           <figcaption className="mt-4 text-center text-sm font-medium text-[#4a554b]">
             Organizers and volunteers at the Palo Alto Girls Math Tournament (PAGMT)
