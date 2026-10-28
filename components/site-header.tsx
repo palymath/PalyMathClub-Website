@@ -59,7 +59,8 @@ export const eventGroups: { heading: string; description: string; events: ClubEv
         url: 'https://pagmt.com', 
         when: 'May', 
         role: 'We organize', 
-        image: '/images/pagmt.png' 
+        image: '/images/pagmt.png',
+        bannerImage: '/images/pagmttalk.jpg'
       },
       { 
         title: 'Palo Alto Middle School Math Camp', 
