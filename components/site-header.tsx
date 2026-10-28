@@ -95,6 +95,17 @@ export const eventGroups: { heading: string; description: string; events: ClubEv
   },
 ]
 
+export const board = [
+  { initials: 'IC', name: 'Inhoo Chang', role: 'Co-President' },
+  { initials: 'KC', name: 'Krittika Chandra', role: 'Co-President' },
+  { initials: 'MK', name: 'Meghana Konduri', role: 'Vice President' },
+  { initials: 'OV', name: 'Oscar Varodayan', role: 'Vice President' },
+  { initials: 'BC', name: 'Brian Chung', role: 'Competition Manager' },
+  { initials: 'SS', name: 'Sayan Singh', role: 'Treasurer' },
+  { initials: 'AX', name: 'Albert Xu', role: 'Activity Manager' },
+  { initials: 'BR', name: 'Beinan Ren', role: 'PR Manager' },
+]
+
 export function EventCard({ event }: { event: ClubEvent }) {
   const content = (
     <div className="flex flex-col gap-5 p-5 sm:p-6">
