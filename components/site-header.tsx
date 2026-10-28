@@ -44,7 +44,8 @@ export type ClubEvent = {
   location?: string; 
   when: string; 
   role?: string; 
-  image?: string 
+  image?: string;
+  bannerImage?: string;
 }
 
 export const eventGroups: { heading: string; description: string; events: ClubEvent[] }[] = [
@@ -58,7 +59,7 @@ export const eventGroups: { heading: string; description: string; events: ClubEv
         url: 'https://pagmt.com', 
         when: 'May', 
         role: 'We organize', 
-        image: '/images/pagmt.png' // Update extension if pagmt.jpg or pagmt.png
+        image: '/images/pagmt.png' 
       },
       { 
         title: 'Palo Alto Middle School Math Camp', 
@@ -66,7 +67,8 @@ export const eventGroups: { heading: string; description: string; events: ClubEv
         url: 'https://pams.vercel.app', 
         when: 'Summer', 
         role: 'We co-organize', 
-        image: '/images/pamslogo.webp' 
+        image: '/images/pamslogo.webp',
+        bannerImage: '/images/pams.png'
       },
       { title: 'Greene Middle School Math Club', url: 'https://greene.pausd.org/school-life/clubs', when: 'Yearlong', role: 'We organize' },
       { title: 'Annual Team Math Contest', abbr: 'ATM', location: 'At Paly', when: 'Winter & Spring', role: 'We organize' },
@@ -93,50 +95,53 @@ export const eventGroups: { heading: string; description: string; events: ClubEv
   },
 ]
 
-export const board = [
-  { initials: 'IC', name: 'Inhoo Chang', role: 'Co-President' },
-  { initials: 'KC', name: 'Krittika Chandra', role: 'Co-President' },
-  { initials: 'MK', name: 'Meghana Konduri', role: 'Vice President' },
-  { initials: 'OV', name: 'Oscar Varodayan', role: 'Vice President' },
-  { initials: 'BC', name: 'Brian Chung', role: 'Competition Manager' },
-  { initials: 'SS', name: 'Sayan Singh', role: 'Treasurer' },
-  { initials: 'AX', name: 'Albert Xu', role: 'Activity Manager' },
-  { initials: 'BR', name: 'Beinan Ren', role: 'PR Manager' },
-]
-
 export function EventCard({ event }: { event: ClubEvent }) {
-  const cardClass = "flex flex-col gap-4 rounded-2xl border border-[#cbd8c8] bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6"
   const content = (
-    <>
-      <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-2">
-          {event.abbr && <span className="rounded-md bg-[#dcebd7] px-2 py-0.5 text-xs font-bold tracking-wider text-[#1b5e3c]">{event.abbr}</span>}
-          {event.role && <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#1b5e3c]">{event.role}</span>}
-        </div>
-        <h3 className="mt-2 text-xl font-bold text-[#101510] text-balance sm:text-2xl">{event.title}</h3>
-        
-        {event.image && (
-          <div className="mt-3">
-            <img 
-              src={event.image} 
-              alt={event.title} 
-              className="h-14 w-auto rounded-lg object-contain" 
-            />
+    <div className="flex flex-col gap-5 p-5 sm:p-6">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2">
+            {event.abbr && <span className="rounded-md bg-[#dcebd7] px-2 py-0.5 text-xs font-bold tracking-wider text-[#1b5e3c]">{event.abbr}</span>}
+            {event.role && <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#1b5e3c]">{event.role}</span>}
           </div>
-        )}
+          <h3 className="mt-2 text-xl font-bold text-[#101510] text-balance sm:text-2xl">{event.title}</h3>
+          
+          {event.image && (
+            <div className="mt-3">
+              <img 
+                src={event.image} 
+                alt="" 
+                className="h-14 w-auto rounded-lg object-contain" 
+              />
+            </div>
+          )}
 
-        {event.url ? (
-          <p className="mt-2 break-all text-sm text-[#607064] group-hover:text-[#1b5e3c] group-hover:underline">
-            {event.url.replace(/^https?:\/\//, '')}
-            <span className="sr-only"> (opens in a new tab)</span>
-          </p>
-        ) : (
-          event.location && <p className="mt-1 text-sm text-[#607064]">{event.location}</p>
-        )}
+          {event.url ? (
+            <p className="mt-2 break-all text-sm text-[#607064] group-hover:text-[#1b5e3c] group-hover:underline">
+              {event.url.replace(/^https?:\/\//, '')}
+              <span className="sr-only"> (opens in a new tab)</span>
+            </p>
+          ) : (
+            event.location && <p className="mt-1 text-sm text-[#607064]">{event.location}</p>
+          )}
+        </div>
+        <span className="shrink-0 self-start rounded-full bg-[#1b5e3c] px-4 py-1.5 text-sm font-bold text-white sm:self-center">{event.when}</span>
       </div>
-      <span className="shrink-0 self-start rounded-full bg-[#1b5e3c] px-4 py-1.5 text-sm font-bold text-white sm:self-center">{event.when}</span>
-    </>
+
+      {event.bannerImage && (
+        <div className="w-full overflow-hidden rounded-xl bg-[#e6eee2]">
+          <img
+            src={event.bannerImage}
+            alt={event.title}
+            className="h-auto w-full object-cover"
+          />
+        </div>
+      )}
+    </div>
   )
+
+  const cardClass = "group block rounded-2xl border border-[#cbd8c8] bg-white transition-colors hover:border-[#1b5e3c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1b5e3c]"
+
   return (
     <li>
       {event.url ? (
@@ -144,7 +149,7 @@ export function EventCard({ event }: { event: ClubEvent }) {
           href={event.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`group ${cardClass} transition-colors hover:border-[#1b5e3c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1b5e3c]`}
+          className={cardClass}
         >
           {content}
         </a>
