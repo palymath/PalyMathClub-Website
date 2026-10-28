@@ -84,6 +84,16 @@ Your donation helps us run club meetings, fund events like the Palo Alto Girls M
             </a>
           </div>
         </article>
+        <figure className="mt-16 overflow-hidden rounded-[2rem] bg-[#e6eee2] p-4 shadow-[12px_12px_0_#b7d9b2] sm:p-6">
+  <img
+    src="/images/pagmttest.JPG"
+    alt="Elementary division competitors at the Palo Alto Girls Math Tournament (PAGMT)"
+    className="h-auto w-full rounded-[1.5rem]"
+  />
+  <figcaption className="mt-4 text-center text-sm font-medium text-[#4a554b]">
+    Elementary division competitors at the Palo Alto Girls Math Tournament (PAGMT)
+  </figcaption>
+</figure>
       </section>
     </PageShell>
   )
