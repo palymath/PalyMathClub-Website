@@ -9,7 +9,7 @@ const stories = [
   {
     title: 'Math Club places third in the Bay Area Math Olympiad',
     date: 'May 3, 2023',
-    href: '  https://thecampanile.org/28652/uncategorized/math-club-places-third-in-the-bay-area-math-olympiad/',
+    href: 'https://thecampanile.org/28652/uncategorized/math-club-places-third-in-the-bay-area-math-olympiad/',
   },
   {
     title: "Palo Alto High School's second annual Team Math Contest attracts dozens of students",
@@ -35,28 +35,45 @@ export function NewsStories() {
         </div>
         <p className="text-sm text-[#4a554b]">Coverage from The Paly Voice and The Campanile</p>
       </div>
-      <ul className="grid gap-6 md:grid-cols-3">
-        {stories.map((story) => (
-          <li key={story.href}>
-            <a
-              href={story.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex h-full flex-col rounded-[1.5rem] border border-[#d6e2d1] bg-white p-6 transition hover:-translate-y-1 hover:shadow-[8px_8px_0_#b7d9b2]"
-            >
-              <div className="mb-4 flex items-center justify-between text-xs font-bold uppercase tracking-[0.15em] text-[#1b5e3c]">
-                <span>{story.date ?? 'The Paly Voice'}</span>
-                <ArrowUpRight className="size-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold leading-snug tracking-[-0.02em] text-balance">{story.title}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#4a554b]">{story.summary}</p>
-              <span className="mt-6 text-sm font-bold underline decoration-[#8ac47c] decoration-2 underline-offset-4">
-                Read the story<span className="sr-only"> (opens in a new tab)</span>
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
+
+      {/* Main container split into 12 columns on large screens */}
+      <div className="grid grid-cols-1 gap-8 items-start lg:grid-cols-12 lg:gap-10">
+        
+        {/* Left side: 2x2 grid for the 4 stories */}
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-7">
+          {stories.map((story) => (
+            <li key={story.href}>
+              <a
+                href={story.href.trim()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-full flex-col justify-between rounded-[1.5rem] border border-[#d6e2d1] bg-white p-6 transition hover:-translate-y-1 hover:shadow-[8px_8px_0_#b7d9b2]"
+              >
+                <div>
+                  <div className="mb-4 flex items-center justify-between text-xs font-bold uppercase tracking-[0.15em] text-[#1b5e3c]">
+                    <span>{story.date ?? 'The Paly Voice'}</span>
+                    <ArrowUpRight className="size-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-bold leading-snug tracking-[-0.02em] text-balance">{story.title}</h3>
+                </div>
+                <span className="mt-6 inline-block text-sm font-bold underline decoration-[#8ac47c] decoration-2 underline-offset-4">
+                  Read the story<span className="sr-only"> (opens in a new tab)</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Right side: Squarish image matching your hero section styling */}
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#e6eee2] p-4 shadow-[12px_12px_0_#b7d9b2] sm:p-6 lg:col-span-5 lg:sticky lg:top-8">
+          <img
+            src="/images/bmt.png" // Adjust path if needed (e.g. /bmt.png)
+            alt="Paly Math Club at Berkeley Math Tournament"
+            className="aspect-square w-full rounded-[1.5rem] bg-white object-cover"
+          />
+        </div>
+
+      </div>
     </section>
   )
 }
