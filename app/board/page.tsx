@@ -13,15 +13,15 @@ export default function BoardPage() {
 
         {/* PAGMT Banner Image */}
         <figure className="mt-16 overflow-hidden rounded-[2rem] bg-[#e6eee2] p-4 shadow-[12px_12px_0_#b7d9b2] sm:p-6">
-          <img
-            src="/images/pagmtteam.JPG"
-            alt="Organizers and volunteers at the Palo Alto Girls Math Tournament (PAGMT)"
-            className="aspect-[3/2] w-full rounded-[1.5rem] object-cover sm:aspect-[4/3]"
-          />
-          <figcaption className="mt-4 text-center text-sm font-medium text-[#4a554b]">
-            Organizers and volunteers at the Palo Alto Girls Math Tournament (PAGMT)
-          </figcaption>
-        </figure>
+  <img
+    src="/images/pagmtteam.JPG"
+    alt="Organizers and volunteers at the Palo Alto Girls Math Tournament (PAGMT)"
+    className="h-auto w-full rounded-[1.5rem]"
+  />
+  <figcaption className="mt-4 text-center text-sm font-medium text-[#4a554b]">
+    Organizers and volunteers at the Palo Alto Girls Math Tournament (PAGMT)
+  </figcaption>
+</figure>
       </section>
     </PageShell>
   )
