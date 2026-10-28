@@ -9,7 +9,6 @@ const links = [
   { label: 'collaborate', href: '/collaborate' },
 ]
 
-
 export function SiteHeader() {
   return (
     <header className="border-b border-[#d5dfd2] bg-[#f7f8f4]">
@@ -32,10 +31,17 @@ export function SiteHeader() {
       </div>
     </header>
   )
-}
+} 
 
 export function SiteFooter() {
-  return <footer className="border-t border-[#d5dfd2] px-6 py-7 lg:px-8"><div className="mx-auto flex max-w-6xl justify-between gap-4 text-sm text-[#607064]"><p>Paly Math Club · <a href="https://paly.net/about-us/campus-map" target="_blank" rel="noopener noreferrer" className="font-semibold underline-offset-4 hover:text-[#1b5e3c] hover:underline">Room 855</a></p><a href="mailto:palymathclub@gmail.com" className="font-semibold hover:text-[#1b5e3c]">palymathclub@gmail.com</a></div></footer>
+  return (
+    <footer className="border-t border-[#d5dfd2] px-6 py-7 lg:px-8">
+      <div className="mx-auto flex max-w-6xl justify-between gap-4 text-sm text-[#607064]">
+        <p>Paly Math Club · <a href="https://paly.net/about-us/campus-map" target="_blank" rel="noopener noreferrer" className="font-semibold underline-offset-4 hover:text-[#1b5e3c] hover:underline">Room 855</a></p>
+        <a href="mailto:palymathclub@gmail.com" className="font-semibold hover:text-[#1b5e3c]">palymathclub@gmail.com</a>
+      </div>
+    </footer>
+  )
 }
 
 export type ClubEvent = { 
@@ -86,3 +92,4 @@ export const eventGroups: { heading: string; description: string; events: ClubEv
       { title: 'Stanford Math Tournament', abbr: 'SMT', url: 'https://stanfordmathtournament.org', when: 'April' },
     ],
   },
+];
