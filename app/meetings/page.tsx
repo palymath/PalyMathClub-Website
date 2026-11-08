@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 }
 
 const meetings = [
-  { month: 'NOV', day: '4', weekday: 'Wednesday', time: 'After school', type: 'Practice', title: 'BMT Practice: Guts Round' },
-  { month: 'NOV', day: '5', weekday: 'Thursday', time: 'Lunch time', type: 'Lecture', title: 'AMC Strategies' },
   { month: 'NOV', day: '11', weekday: 'Wednesday', time: 'After school', type: 'Practice', title: 'No Meeting (Veteran\'s Day)' },
-  { month: 'NOV', day: '12', weekday: 'Thursday', time: 'Lunch time', type: 'Lecture', title: 'Shortest Paths' }
+  { month: 'NOV', day: '12', weekday: 'Thursday', time: 'Lunch time', type: 'Meeting', title: 'Mandatory Pre-BMT Logistics Meeting' },
+  { month: 'NOV', day: '14', weekday: 'Saturday', time: 'All day', type: 'Competition', title: 'Berkeley Math Tournament' },
+  { month: 'NOV', day: '19', weekday: 'Thursday', time: 'Lunch time', type: 'Lecture', title: 'Shortest Paths' }
 ]
 
 export default function MeetingsPage() {
